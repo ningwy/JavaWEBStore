@@ -5,7 +5,7 @@
   <named-config name="javawebapp"> 
   
   	<property name="user">root</property>
-  	<property name="password">mysql</property>
+  	<property name="password">5761332</property>
   	<property name="jdbcUrl">jdbc:mysql://localhost:3306/bookstore</property>
   	<property name="driverClass">com.mysql.jdbc.Driver</property>
   

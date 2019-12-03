@@ -37,8 +37,9 @@ public class Page<T> {
 			pageNo = 1;
 		}
 		//当大于总的页数时，让pageNo等于最后一页的页码
-		if (pageNo > getTotalPageNumber()) {
-			pageNo = getTotalPageNumber();
+		int totalPageNum = getTotalPageNumber();
+		if (pageNo > totalPageNum) {
+			pageNo = totalPageNum;
 		}
 		return pageNo;
 	}
@@ -62,7 +63,7 @@ public class Page<T> {
 	public int getTotalPageNumber() {
 		
 		int totalPageNumber = (int) totalItemNumber / pageSize;
-		if (totalPageNumber % pageSize != 0) {
+		if (totalItemNumber % pageSize != 0) {
 			totalPageNumber = totalPageNumber + 1;
 		}
 		
